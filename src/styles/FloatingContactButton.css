@@ -1,0 +1,40 @@
+.floating-contact {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: radial-gradient(circle at top left, #0ff 0%, #007bff 80%);
+  color: #fff;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 0 12px rgba(0, 204, 255, 0.6),
+              0 0 24px rgba(0, 140, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  z-index: 999;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.floating-contact:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.9),
+              0 0 40px rgba(0, 140, 255, 0.5);
+  background: radial-gradient(circle at bottom right, #00bfff 0%, #005eff 80%);
+}
+
+.whatsapp-icon {
+  font-size: 28px;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
+}
+
+@media (max-width: 768px) {
+  .floating-contact {
+    bottom: 18px;
+    right: 18px;
+    padding: 12px;
+  }
+
+  .whatsapp-icon {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,109 @@
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.cardSide {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+.cardSide:hover {
+  transform: translateY(-4px);
+}
+
+.introductionSide {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+  max-width: 600px;
+}
+
+.texside h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #ffffff, #00d8ff);
+-webkit-background-clip: text;
+background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.texside p {
+  font-size: 1.1rem;
+  color: #bcbcbc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ctaButton {
+  align-self: flex-start;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00d8ff, #0078ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 136, 255, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 136, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .ctaButton {
+    align-self: center;
+  }
+
+  .texside h1 {
+    font-size: 2.2rem;
+  }
+
+  .texside p {
+    font-size: 1rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #00d8ff;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 217, 255, 0.6));
+}
+
+.social-links a:hover {
+  color: #00ffff;
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.9));
+}

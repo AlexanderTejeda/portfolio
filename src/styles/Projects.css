@@ -1,0 +1,131 @@
+.projectsSection {
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.projectsSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #00d8ff, #0078ff);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+color: #bcbcbc;
+font-size: 1.1rem;
+margin-bottom: 4rem;
+}
+
+.projectsGrid {
+display: grid;
+gap: 2.5rem;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+justify-items: center;
+}
+
+.projectCard {
+background: #1a1a1a;
+border-radius: 1.2rem;
+overflow: hidden;
+box-shadow: 0 0 20px rgba(0, 136, 255, 0.15);
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+max-width: 360px;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 136, 255, 0.3);
+}
+
+.projectImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.projectInfo {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.projectInfo h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.projectInfo p {
+  color: #bcbcbc;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.projectInfo a {
+  color: #00d8ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.projectInfo a:hover {
+  color: #0078ff;
+}
+
+
+
+.projectTech {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  color: #61dafb; 
+}
+
+.techIcon {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.techIcon:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.projectButton {
+  background: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.projectButton:hover {
+  background: #0056d2;
+}
+
+.githubButton {
+  color: #fff;
+  background: #24292e;
+  padding: 0.6rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.githubButton:hover {
+  background: #333;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
