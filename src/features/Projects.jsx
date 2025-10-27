@@ -73,14 +73,14 @@ const projects = [
               </div>
 
               <div className="projectLinks">
-                <a
+                {/*<a
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="projectButton"
                 >
                   Ver proyecto →
-                </a>
+                </a>*/}
                 <a
                   href={proj.github}
                   target="_blank"

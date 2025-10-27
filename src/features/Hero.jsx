@@ -21,7 +21,7 @@ const Hero = ({onViewProjects}) => {
         <section className="cardSide">
             <ProfileCard
                 name="Alexander Tejeda"
-                title="Web Developer — Fundador de Virex"
+                title="Web Developer"
                 handle="alexdtejeda"
                 status="Online"
                 contactText="Contactame"
