@@ -3,7 +3,7 @@ import "../styles/FloatingContactButton.css";
 
 
 const FloatingContactButton = () => {
-  const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "5215555555555"; 
+  const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009"; 
   const message = encodeURIComponent("¡Hola Alexander! Vi tu portafolio y me gustaría contactarte.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

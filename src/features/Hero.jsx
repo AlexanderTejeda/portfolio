@@ -9,8 +9,8 @@ import "../styles/Hero.css";
 const Hero = ({onViewProjects}) => {
     
     const handleWhatsappClick = () => {
-        const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
-        const whatsappMessage = import.meta.env.VITE_WHATSAPP_MESSAGE;
+        const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009";
+        const whatsappMessage = import.meta.env.VITE_WHATSAPP_MESSAGE || "¡Hola Alexander! Vi tu portafolio y me gustaría contactarte.";
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
     }
