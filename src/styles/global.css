@@ -2,5 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+}
+
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
 }

@@ -6,7 +6,7 @@ import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import "../styles/Hero.css";
 
 
-const Hero = ({onViewProjects}) => {
+const Hero = () => {
     
     const handleWhatsappClick = () => {
         const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009";
@@ -40,13 +40,6 @@ const Hero = ({onViewProjects}) => {
                     He trabajado en diversos proyectos, desde sitios web simples hasta aplicaciones web complejas. Mi objetivo es crear experiencias digitales atractivas y funcionales que ayuden a las empresas a alcanzar sus metas en línea.
                 </p>
             </aside>
-            
-            <button 
-                className="ctaButton"
-                onClick={onViewProjects} 
-            >
-                Ver proyectos
-            </button>
 
             <div className="social-links">
                 <a href="https://github.com/AlexanderTejeda" target="_blank" rel="noreferrer">
