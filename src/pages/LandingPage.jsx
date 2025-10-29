@@ -1,6 +1,6 @@
-import "../styles/global.css";
 import Hero from "../features/Hero";
 import Projects from "../features/Projects";
+import "../styles/LandingPage.css";
 
 const LandingPage = () => {
 
@@ -8,11 +8,11 @@ const LandingPage = () => {
   return (
     <main className="perspective">
       <section>
-        <div>
+        <div className="hero-section">
           <Hero  />
         </div>
 
-        <div>
+        <div className="projects-section">
           <Projects />
         </div>
       </section>

@@ -1,0 +1,18 @@
+@keyframes fadeUp {
+   0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.projects-section {
+  animation: fadeUp linear both;
+  animation-timeline: scroll();
+  animation-range: entry 20% cover 30%;
+}
