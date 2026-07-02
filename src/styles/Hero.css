@@ -1,14 +1,15 @@
 
-main {
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 4rem 2rem;
   color: #fff;
-  font-family: "Poppins", sans-serif;
   gap: 4rem;
   flex-wrap: wrap;
+  max-width: 1250px;
+  margin-inline: auto;
 }
 
 .cardSide {
@@ -70,7 +71,7 @@ background-clip: text;
 }
 
 @media (max-width: 900px) {
-  main {
+  .hero {
     flex-direction: column-reverse;
     text-align: center;
   }

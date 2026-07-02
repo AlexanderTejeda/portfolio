@@ -17,6 +17,9 @@ background-clip: text;
 color: #bcbcbc;
 font-size: 1.1rem;
 margin-bottom: 4rem;
+max-width: 65ch;
+margin-inline: auto;
+text-wrap: pretty;
 }
 
 .projectsGrid {
@@ -24,6 +27,8 @@ display: grid;
 gap: 2.5rem;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 justify-items: center;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .projectCard {
@@ -128,4 +133,8 @@ max-width: 360px;
   background: #333;
   transform: translateY(-2px);
   cursor: pointer;
+}
+
+.githubButton:active {
+  transform: translateY(0) scale(0.97);
 }

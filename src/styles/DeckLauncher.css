@@ -1,0 +1,216 @@
+.deckLauncher {
+  position: fixed;
+  bottom: 24px;
+  left: calc(24px + var(--deck-offset) * 128px);
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 900;
+  font-family: inherit;
+  animation: deckIn 0.6s ease both;
+  animation-delay: calc(0.15s + var(--deck-offset) * 0.12s);
+}
+
+@keyframes deckIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Baraja de cartas que asoma detrás del círculo --- */
+
+.deckFan {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  width: 0;
+  pointer-events: none;
+}
+
+.deckCard {
+  position: absolute;
+  bottom: 0;
+  left: -29px;
+  width: 58px;
+  height: 44px;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 216, 255, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  color: #00d8ff;
+  font-size: 1.3rem;
+  transform-origin: 50% 130%;
+  transform: rotate(calc(var(--delta) * 7deg)) translateY(-6px);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: calc(10 - var(--order));
+}
+
+.deckCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deckLauncher:hover .deckCard,
+.deckLauncher:focus-visible .deckCard {
+  transform: translateX(calc(var(--delta) * 30px))
+    rotate(calc(var(--delta) * 16deg)) translateY(-42px);
+  transition-delay: calc(var(--order) * 40ms);
+}
+
+/* --- Círculo --- */
+
+.deckCircle {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background:
+    linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(135deg, #00d8ff, #0078ff) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 0 18px rgba(0, 216, 255, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.deckLauncher:hover .deckCircle {
+  transform: scale(1.06);
+  box-shadow: 0 0 28px rgba(0, 216, 255, 0.6);
+}
+
+.deckLauncher:active .deckCircle {
+  transform: scale(0.97);
+}
+
+.deckLabel {
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* --- Overlay --- */
+
+.deckOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(8, 10, 14, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+.deckOverlayContent {
+  position: relative;
+  width: min(1200px, 100%);
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #141414;
+  border: 1px solid rgba(0, 216, 255, 0.18);
+  border-radius: 1.4rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 216, 255, 0.45) transparent;
+}
+
+.deckOverlayContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.deckOverlayContent::-webkit-scrollbar-thumb {
+  background: rgba(0, 216, 255, 0.45);
+  border-radius: 6px;
+}
+
+.deckClose {
+  position: sticky;
+  top: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 216, 255, 0.35);
+  background: rgba(20, 20, 20, 0.9);
+  color: #00d8ff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 30;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.deckClose:hover {
+  color: #00ffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(0, 216, 255, 0.4);
+}
+
+/* Secciones reutilizadas dentro del overlay: menos aire que a página completa */
+.deckOverlayContent .projectsSection,
+.deckOverlayContent .certsSection {
+  padding: 0.5rem 2rem 3rem;
+}
+
+.deckOverlayContent .sectionSubtitle {
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .deckLauncher {
+    width: 78px;
+    height: 78px;
+    bottom: 18px;
+    left: calc(16px + var(--deck-offset) * 96px);
+  }
+
+  .deckCircle {
+    width: 78px;
+    height: 78px;
+  }
+
+  .deckLabel {
+    font-size: 0.7rem;
+  }
+
+  .deckFan {
+    bottom: 36px;
+  }
+
+  .deckCard {
+    width: 46px;
+    height: 36px;
+    left: -23px;
+  }
+
+  .deckOverlay {
+    padding: 0.8rem;
+  }
+
+  .deckOverlayContent .projectsSection,
+  .deckOverlayContent .certsSection {
+    padding: 0.5rem 1.2rem 2.5rem;
+  }
+}

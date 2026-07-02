@@ -24,9 +24,9 @@ const adjust = (value, fromMin, fromMax, toMin, toMax) =>
 const easeInOutCubic = x => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 
 const ProfileCardComponent = ({
-  avatarUrl = './assets/Avatar.png',
-  iconUrl = './assets/Avatar.png',
-  grainUrl = './assets/Avatar.png',
+  avatarUrl,
+  iconUrl,
+  grainUrl,
   behindGradient,
   innerGradient,
   showBehindGradient = true,
@@ -259,7 +259,8 @@ const ProfileCardComponent = ({
               className="avatar"
               src={avatarUrl}
               alt={`${name || 'User'} avatar`}
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
               onError={e => {
                 const target = e.target;
                 target.style.display = 'none';

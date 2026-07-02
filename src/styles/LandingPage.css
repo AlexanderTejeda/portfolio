@@ -1,18 +1,6 @@
-@keyframes fadeUp {
-   0% {
-    opacity: 0;
-    transform: translateY(80px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.projects-section {
-  animation: fadeUp linear both;
-  animation-timeline: scroll();
-  animation-range: entry 20% cover 30%;
+/* La landing es una sola pantalla: el hero ocupa el viewport y
+   proyectos/certificados viven en overlays lanzados desde las barajas. */
+.perspective {
+  min-height: 100dvh;
+  overflow: hidden;
 }

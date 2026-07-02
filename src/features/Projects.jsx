@@ -53,18 +53,26 @@ const projects = [
     <section className="projectsSection">
       <h2>Proyectos destacados</h2>
       <p className="sectionSubtitle">
-        Algunos de los proyectos que he creado, mostrando cómo transformo ideas en aplicaciones web funcionales y dinámicas.
+        Una selección de lo que sé hacer: IA aplicada, e-commerce, scraping en tiempo real y experiencias web que se sienten vivas.
       </p>
 
       <div className="projectsGrid">
         {projects.map((proj, index) => (
           <article key={index} className="projectCard">
-            <img src={proj.image} alt={proj.title} className="projectImage" />
+            <img
+              src={proj.image}
+              alt={`Captura del proyecto ${proj.title}`}
+              className="projectImage"
+              width="360"
+              height="220"
+              loading="lazy"
+              decoding="async"
+            />
             <div className="projectInfo">
               <h3>{proj.title}</h3>
               <p>{proj.description}</p>
 
-              <div className="projectTech">
+              <div className="projectTech" aria-hidden="true">
                 {proj.tech.map((icon, i) => (
                   <span key={i} className="techIcon">
                     {icon}
@@ -73,21 +81,14 @@ const projects = [
               </div>
 
               <div className="projectLinks">
-                {/*<a
-                  href={proj.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="projectButton"
-                >
-                  Ver proyecto →
-                </a>*/}
                 <a
                   href={proj.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="githubButton"
+                  aria-label={`Ver código de ${proj.title} en GitHub`}
                 >
-                  <FaGithub size={22} />
+                  <FaGithub size={22} aria-hidden="true" />
                 </a>
               </div>
             </div>
