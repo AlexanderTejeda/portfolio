@@ -23,13 +23,21 @@ const CATEGORIES = [
 
 const certifications = [
   {
+    title: "Curso Intensivo de Model Context Protocol",
+    issuer: "midudev",
+    year: 2026,
+    category: "ia",
+    icon: <FaRobot />,
+    file: "/certificados/model-context-protocol.pdf",
+    featured: true,
+  },
+  {
     title: "Desarrollo con IA: Programa con Agentes",
     issuer: "MoureDev × BIG School",
     year: 2026,
     category: "ia",
     icon: <FaRobot />,
     file: "/certificados/desarrollo-con-ia-programa-con-agentes.pdf",
-    featured: true,
   },
   {
     title: "Scrum Fundamentals Certified",

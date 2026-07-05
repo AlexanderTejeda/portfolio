@@ -1,7 +1,7 @@
 .deckLauncher {
   position: fixed;
   bottom: 24px;
-  left: calc(24px + var(--deck-offset) * 128px);
+  left: calc(64px + var(--deck-offset) * 128px);
   width: 96px;
   height: 96px;
   padding: 0;
@@ -183,7 +183,7 @@
     width: 78px;
     height: 78px;
     bottom: 18px;
-    left: calc(16px + var(--deck-offset) * 96px);
+    left: calc(40px + var(--deck-offset) * 96px);
   }
 
   .deckCircle {

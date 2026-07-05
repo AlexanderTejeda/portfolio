@@ -2,7 +2,7 @@ import ProfileCard from "../components/ProfileCard";
 import Avatar from "../assets/foto-profesional.jpeg";
 import { FaGithub, FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { AiFillTikTok } from 'react-icons/ai';
-import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 import "../styles/Hero.css";
 
 
@@ -39,9 +39,9 @@ const Hero = () => {
 
         <section className="introductionSide">
             <aside className="texside">
-                <h1>Convierto ideas en experiencias web que generan resultados</h1>
+                <h1>Construyo software web sólido, de principio a fin</h1>
                 <p>
-                    Desarrollador web full-stack con más de 3 años de experiencia construyendo desde e-commerce de alto rendimiento hasta aplicaciones con inteligencia artificial. Combino código limpio, diseño cuidado y obsesión por la conversión para que cada proyecto no solo se vea bien: funcione y venda.
+                    Desarrollador full-stack con más de 3 años de experiencia diseñando e implementando aplicaciones web: desde e-commerce y automatizaciones hasta herramientas con inteligencia artificial. Me importa el código, la arquitectura que escala y resolver problemas reales.
                 </p>
             </aside>
 
@@ -55,14 +55,11 @@ const Hero = () => {
                 <a href="https://x.com/alexdtejeda" target="_blank" rel="noreferrer" aria-label="X (Twitter) de Alexander Tejeda">
                     <FaXTwitter aria-hidden="true" />
                 </a>
-                <a href="https://www.youtube.com/@alexanderdtejeda" target="_blank" rel="noreferrer" aria-label="YouTube de Alexander Tejeda">
+                <a href="https://www.youtube.com/@alexdtejeda" target="_blank" rel="noreferrer" aria-label="YouTube de Alexander Tejeda">
                     <FaYoutube aria-hidden="true" />
                 </a>
                 <a href="https://www.tiktok.com/@alexdtejeda" target="_blank" rel="noreferrer" aria-label="TikTok de Alexander Tejeda">
                     <AiFillTikTok aria-hidden="true" />
-                </a>
-                <a href="https://www.facebook.com/alexdtjeda/" target="_blank" rel="noreferrer" aria-label="Facebook de Alexander Tejeda">
-                    <FaFacebookSquare aria-hidden="true" />
                 </a>
                 <a href="https://www.instagram.com/alexdtejeda/" target="_blank" rel="noreferrer" aria-label="Instagram de Alexander Tejeda">
                     <FaInstagram aria-hidden="true" />
