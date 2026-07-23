@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import "../styles/DeckLauncher.css";
 
@@ -10,7 +10,7 @@ const DeckLauncher = ({ label, deck, children, offset = 0 }) => {
 
   useEffect(() => {
     if (!open) return undefined;
-    closeBtnRef.current?.focus();
+    closeBtnRef.current?.focus({ preventScroll: true });
     const onKey = (e) => {
       if (e.key === "Escape") setOpen(false);
     };
@@ -53,7 +53,7 @@ const DeckLauncher = ({ label, deck, children, offset = 0 }) => {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <Motion.div
             className="deckOverlay"
             role="dialog"
             aria-modal="true"
@@ -66,7 +66,7 @@ const DeckLauncher = ({ label, deck, children, offset = 0 }) => {
               if (e.target === e.currentTarget) setOpen(false);
             }}
           >
-            <motion.div
+            <Motion.div
               className="deckOverlayContent"
               initial={{ opacity: 0, y: 48, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -83,8 +83,8 @@ const DeckLauncher = ({ label, deck, children, offset = 0 }) => {
                 <FaTimes aria-hidden="true" />
               </button>
               {children}
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
     </>

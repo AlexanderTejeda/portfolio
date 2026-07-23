@@ -3,6 +3,8 @@ import { FaGithub, FaCss3,FaNodeJs, FaReact } from 'react-icons/fa';
 import { AiOutlinePython, AiOutlineHtml5 } from 'react-icons/ai';
 import { FaSquareJs } from 'react-icons/fa6';
 import { BiLogoFirebase } from 'react-icons/bi';
+import { SiPostgresql, SiPrisma, SiTailwindcss } from 'react-icons/si';
+import lifeosImg from "../assets/lifeos.webp";
 import chatbotImg from "../assets/chatbot.webp";
 import mondeImg from "../assets/monde.webp";
 import scrapperImg from "../assets/webscraping.webp";
@@ -11,6 +13,15 @@ import summaryImg from "../assets/summarizer.webp";
 const Projects = () => {
  
 const projects = [
+  {
+    title: "LifeOS — Sistema de control de vida",
+    description:
+      "Aplicación full-stack open source para medir tu vida en un solo lugar: finanzas, cuerpo, hábitos y salud. Backend en Node.js + Express 5 con PostgreSQL y Prisma, autenticación JWT y validación con Zod; frontend en React 19 con Tailwind y gráficas en Recharts.",
+    image: lifeosImg,
+    link: "#",
+    github: "https://github.com/AlexanderTejeda/LifeOs",
+    tech: [<FaNodeJs />, <SiPostgresql />, <SiPrisma />, <FaReact />, <SiTailwindcss />, <FaSquareJs />],
+  },
   {
     title: "Chatbot Demo",
     description:

@@ -1,8 +1,18 @@
 import Hero from "../features/Hero";
 import Projects from "../features/Projects";
 import Certifications from "../features/Certifications";
+import ProfessionalProfile from "../features/ProfessionalProfile";
 import DeckLauncher from "../components/DeckLauncher";
-import { FaHtml5, FaNetworkWired, FaRobot, FaAward } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaNetworkWired,
+  FaRobot,
+  FaAward,
+  FaBriefcase,
+  FaCode,
+  FaStore,
+  FaBuilding,
+} from "react-icons/fa";
 import chatbotImg from "../assets/chatbot.webp";
 import mondeImg from "../assets/monde.webp";
 import scrapperImg from "../assets/webscraping.webp";
@@ -20,6 +30,13 @@ const certDeck = [
   <FaAward key="merito" />,
 ];
 
+const experienceDeck = [
+  <FaStore key="ecommerce" />,
+  <FaBuilding key="enterprise" />,
+  <FaCode key="fullstack" />,
+  <FaBriefcase key="experience" />,
+];
+
 const LandingPage = () => {
   return (
     <main className="perspective">
@@ -31,6 +48,10 @@ const LandingPage = () => {
 
       <DeckLauncher label="Certificados" deck={certDeck} offset={1}>
         <Certifications />
+      </DeckLauncher>
+
+      <DeckLauncher label="Experiencia" deck={experienceDeck} offset={2}>
+        <ProfessionalProfile />
       </DeckLauncher>
     </main>
   );

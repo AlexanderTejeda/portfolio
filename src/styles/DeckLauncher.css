@@ -170,7 +170,8 @@
 
 /* Secciones reutilizadas dentro del overlay: menos aire que a página completa */
 .deckOverlayContent .projectsSection,
-.deckOverlayContent .certsSection {
+.deckOverlayContent .certsSection,
+.deckOverlayContent .profileSection {
   padding: 0.5rem 2rem 3rem;
 }
 
@@ -210,7 +211,8 @@
   }
 
   .deckOverlayContent .projectsSection,
-  .deckOverlayContent .certsSection {
+  .deckOverlayContent .certsSection,
+  .deckOverlayContent .profileSection {
     padding: 0.5rem 1.2rem 2.5rem;
   }
 }

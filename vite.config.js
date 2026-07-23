@@ -11,7 +11,7 @@ export default defineConfig({
     }),
   ],
   server: {
-    host: '0.0.0.0', // permite acceder desde otras máquinas
-    port: 5173,       // puedes cambiar al puerto que quieras
+    host: '0.0.0.0', 
+    port: 5173,       
   },
 })

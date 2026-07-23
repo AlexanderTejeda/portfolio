@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -184,10 +184,10 @@ const Certifications = () => {
         ))}
       </div>
 
-      <motion.div className="certsGrid" layout>
+      <Motion.div className="certsGrid" layout>
         <AnimatePresence mode="popLayout">
           {visible.map((cert) => (
-            <motion.article
+            <Motion.article
               key={cert.title}
               className={`certCard ${cert.featured ? "featured" : ""}`}
               layout
@@ -226,10 +226,10 @@ const Certifications = () => {
                   )}
                 </div>
               </div>
-            </motion.article>
+            </Motion.article>
           ))}
         </AnimatePresence>
-      </motion.div>
+      </Motion.div>
     </section>
   );
 };
