@@ -2,6 +2,7 @@ import Hero from "../features/Hero";
 import Projects from "../features/Projects";
 import Certifications from "../features/Certifications";
 import ProfessionalProfile from "../features/ProfessionalProfile";
+import Services from "../features/Services";
 import DeckLauncher from "../components/DeckLauncher";
 import {
   FaHtml5,
@@ -12,6 +13,8 @@ import {
   FaCode,
   FaStore,
   FaBuilding,
+  FaLayerGroup,
+  FaPlug,
 } from "react-icons/fa";
 import chatbotImg from "../assets/chatbot.webp";
 import mondeImg from "../assets/monde.webp";
@@ -37,22 +40,33 @@ const experienceDeck = [
   <FaBriefcase key="experience" />,
 ];
 
+const servicesDeck = [
+  <FaCode key="web" />,
+  <FaStore key="shopify" />,
+  <FaLayerGroup key="landing" />,
+  <FaPlug key="integrations" />,
+];
+
 const LandingPage = () => {
   return (
     <main className="perspective">
-      <Hero />
+      <Hero>
+        <DeckLauncher label="Servicios" deck={servicesDeck} offset={0}>
+          <Services />
+        </DeckLauncher>
 
-      <DeckLauncher label="Proyectos" deck={projectDeck} offset={0}>
-        <Projects />
-      </DeckLauncher>
+        <DeckLauncher label="Proyectos" deck={projectDeck} offset={1}>
+          <Projects />
+        </DeckLauncher>
 
-      <DeckLauncher label="Certificados" deck={certDeck} offset={1}>
-        <Certifications />
-      </DeckLauncher>
+        <DeckLauncher label="Experiencia" deck={experienceDeck} offset={2}>
+          <ProfessionalProfile />
+        </DeckLauncher>
 
-      <DeckLauncher label="Experiencia" deck={experienceDeck} offset={2}>
-        <ProfessionalProfile />
-      </DeckLauncher>
+        <DeckLauncher label="Certificados" deck={certDeck} offset={3}>
+          <Certifications />
+        </DeckLauncher>
+      </Hero>
     </main>
   );
 };

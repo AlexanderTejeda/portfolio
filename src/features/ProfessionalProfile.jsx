@@ -11,12 +11,12 @@ import "../styles/ProfessionalProfile.css";
 const experience = [
   {
     company: "Weecom",
-    role: "CRO & Shopify Developer",
+    role: "Shopify Developer",
     period: "Abr. 2026 - Actualidad",
     icon: <FaStore />,
     summary:
-      "Desarrollo y personalizo experiencias de e-commerce para múltiples marcas, desde themes y componentes hasta integraciones y experimentos orientados a conversión.",
-    highlights: ["Shopify Liquid", "JavaScript", "Figma", "CRO & A/B testing"],
+      "Desarrollo y personalizo tiendas Shopify para múltiples marcas, desde themes y componentes reutilizables hasta integraciones y funcionalidades a medida.",
+    highlights: ["Shopify Liquid", "JavaScript", "CSS", "Integraciones"],
   },
   {
     company: "Softtek",
@@ -61,7 +61,7 @@ const ProfessionalProfile = () => (
       </span>
       <h2>Experiencia que conecta tecnología y negocio</h2>
       <p className="sectionSubtitle">
-        He trabajado en producto interno, consultoría enterprise y e-commerce activo.
+        He trabajado en producto interno, consultoría enterprise y desarrollo e-commerce.
         Mi fortaleza está en entender el problema completo y llevarlo a una solución
         funcional, mantenible y orientada a resultados.
       </p>

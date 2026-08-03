@@ -33,6 +33,14 @@
   max-width: 600px;
 }
 
+.heroNavigation {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
 .heroEyebrow {
   display: inline-block;
   margin-bottom: 0.85rem;
@@ -106,6 +114,12 @@ background-clip: text;
 
   .heroActions {
     justify-content: center;
+  }
+
+  .heroNavigation {
+    width: 0;
+    height: 0;
+    margin: 0;
   }
 }
 

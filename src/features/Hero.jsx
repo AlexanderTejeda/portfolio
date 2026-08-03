@@ -9,7 +9,7 @@ const prefersReducedMotion =
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const Hero = () => {
+const Hero = ({ children }) => {
 
     const handleWhatsappClick = () => {
         const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009";
@@ -24,7 +24,7 @@ const Hero = () => {
         <section className="cardSide">
             <ProfileCard
                 name="Alexander Tejeda"
-                title="Software Engineer · Full Stack"
+                title="Desarrollador Web · Full Stack"
                 handle="alexdtejeda"
                 status="Disponible"
                 contactText="Contáctame"
@@ -37,13 +37,18 @@ const Hero = () => {
         </section>
 
         <section className="introductionSide">
+            {children && (
+                <nav className="heroNavigation" aria-label="Contenido del portafolio">
+                    {children}
+                </nav>
+            )}
             <aside className="texside">
-                <span className="heroEyebrow">Software Engineer · Full-Stack Developer</span>
-                <h1>Convierto necesidades de negocio en software que funciona</h1>
+                <span className="heroEyebrow">Desarrollo web · Shopify · Full Stack</span>
+                <h1>Desarrollo soluciones web que llevan tus ideas a producción</h1>
                 <p>
-                    Ingeniero en Sistemas con experiencia en aplicaciones web, sistemas internos,
-                    e-commerce y automatización. He trabajado con React, Node.js, PostgreSQL,
-                    C# y Shopify Liquid en entornos corporativos y productos en producción.
+                    Creo sitios, aplicaciones y funcionalidades a medida para negocios y tiendas
+                    online. Trabajo con React, Node.js y Shopify Liquid para construir soluciones
+                    rápidas, responsivas y listas para crecer.
                 </p>
             </aside>
 
