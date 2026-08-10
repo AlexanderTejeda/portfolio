@@ -53,7 +53,7 @@ const Hero = ({ children }) => {
             </aside>
 
             <div className="heroActions">
-                <a className="cvButton" href="/cv/Alexander_Delgado_Tejeda_CV.pdf" target="_blank" rel="noreferrer">
+                <a className="cvButton" href="/cv/Alexander_D_Tejeda_CV.pdf" target="_blank" rel="noreferrer">
                     <FaDownload aria-hidden="true" />
                     Ver CV
                 </a>
