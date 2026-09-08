@@ -1,14 +1,4 @@
-import LandingPage from "./pages/LandingPage";
-import FloatingContactButton from "./components/FloatingContacButton";
-
-function App() {
-  return (
-    <>
-      <LandingPage />
-      <FloatingContactButton />
-    </>
-  );
-
+import LandingPage from './pages/LandingPage';
+export default function App() {
+  return <LandingPage />;
 }
-
-export default App;

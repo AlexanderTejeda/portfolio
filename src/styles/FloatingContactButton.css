@@ -22,7 +22,7 @@
   background: radial-gradient(circle at bottom right, #00bfff 0%, #005eff 80%);
 }
 
-.whatsapp-icon {
+.linkedin-icon {
   font-size: 28px;
   filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
 }
@@ -34,7 +34,7 @@
     padding: 12px;
   }
 
-  .whatsapp-icon {
+  .linkedin-icon {
     font-size: 24px;
   }
 }

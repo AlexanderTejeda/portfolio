@@ -1,0 +1,168 @@
+.interface-study {
+  width: 100%;
+  min-width: 0;
+  background: #e9eae3;
+  border: 1px solid #d9dbd0;
+  border-radius: 10px;
+  box-shadow: 0 22px 35px -35px #414538;
+}
+
+.study-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #d5d8cc;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+
+.study-top > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.study-top .live-dot {
+  width: 5px;
+  height: 5px;
+  background: #708265;
+}
+
+/* Content remains in flow; the preview stage reserves both responsive layouts. */
+.study-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  padding: 24px;
+  background-image: linear-gradient(#d7d9ce70 1px, transparent 1px),
+    linear-gradient(90deg, #d7d9ce70 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.study-note {
+  position: relative;
+  width: fit-content;
+  padding-right: 52px;
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -.035em;
+}
+
+.study-note em { font-style: normal; color: #68705b; }
+.sketch-arrow { position: absolute; right: 0; bottom: 0; font-size: 38px; }
+
+.demo-window {
+  container-name: preview;
+  container-type: inline-size;
+  justify-self: center;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #74796b;
+  border-radius: 7px;
+  background: #f7f5eb;
+  box-shadow: 5px 10px 0 #cdd2c4;
+  transform: rotate(-2deg);
+  transition: width .4s ease, transform .4s ease;
+}
+
+.demo-window.mobile { width: min(100%, 210px); transform: rotate(2deg); }
+
+.demo-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 12px;
+  border-bottom: 1px solid #dedfd6;
+  border-radius: 7px 7px 0 0;
+  background: #faf9f2;
+  font-size: 7px;
+}
+
+.demo-toolbar > span:first-child { display: flex; gap: 3px; }
+.demo-toolbar i { width: 4px; height: 4px; border: 1px solid #92958c; border-radius: 50%; }
+.demo-body { padding: 14px; }
+.demo-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.demo-nav strong { font-family: var(--display); font-size: 18px; letter-spacing: -1px; }
+.demo-nav > span { font-size: 6px; letter-spacing: .08em; }
+
+/* Labels and artwork have their own rows: no overlap at narrow widths. */
+.demo-product {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #e6e7dc;
+}
+
+.demo-index { font-size: 6px; letter-spacing: .1em; }
+.demo-caption { font-size: 7px; }
+.sculpture { position: relative; justify-self: center; width: 140px; max-width: 100%; height: 115px; }
+.sculpture-ring {
+  position: absolute;
+  top: 2px;
+  left: calc(50% - 44px);
+  width: 88px;
+  height: 88px;
+  border: 20px solid #be492d;
+  border-radius: 50%;
+  transform: rotateY(-22deg) rotate(-25deg);
+  box-shadow: inset 4px 3px 4px #762818, 5px 0 0 #86321e, 10px 10px 11px #625a4833;
+}
+.sculpture-base {
+  position: absolute;
+  bottom: 3px;
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 20px;
+  background: linear-gradient(115deg, #cf643e, #a93622);
+  transform: skewX(-18deg);
+  box-shadow: 9px 8px 9px #625a4844;
+}
+
+.demo-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; }
+.demo-bottom > div { min-width: 0; }
+.demo-bottom strong { display: block; font-size: 11px; font-weight: 550; line-height: 1.5; }
+.demo-bottom div > span { display: block; font-size: 8px; line-height: 1.6; margin-top: 4px; color: #64685b; }
+.demo-round { flex-shrink: 0; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #292b25; color: #f6f5ed; font-size: 14px; }
+.study-caption { justify-self: end; font-size: 7px; line-height: 1.6; letter-spacing: .1em; }
+
+.study-controls { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-top: 1px solid #d5d8cc; font-size: 9px; }
+.study-controls > div { display: flex; gap: 3px; padding: 3px; border-radius: 4px; background: #daddd2; }
+.study-controls button { min-height: 36px; padding: 8px 12px; border-radius: 3px; font-size: 9px; }
+.study-controls button[aria-pressed=true] { background: var(--paper); box-shadow: 0 1px 4px #272d1812; }
+
+/* Respond to the demo's actual width, independently of the page viewport. */
+@container preview (max-width: 250px) {
+  .demo-nav > span:nth-child(2) { display: none; }
+  .demo-bottom { align-items: flex-start; flex-direction: column; }
+  .demo-round { align-self: flex-end; }
+}
+
+@media (max-width: 760px) {
+  .interface-study { max-width: 490px; justify-self: center; }
+  .study-grid { padding: 22px; }
+}
+
+/* Intrinsic sizing copies reserve the larger layout even before the first toggle.
+   They stay out of the accessibility tree and grow with fonts and available width. */
+.demo-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+}
+
+.demo-stage > .demo-window {
+  grid-area: 1 / 1;
+}
+
+.demo-stage > .demo-sizer {
+  visibility: hidden;
+  pointer-events: none;
+  transform: none;
+  transition: none;
+}

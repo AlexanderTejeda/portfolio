@@ -88,11 +88,6 @@ const Services = () => {
     return () => window.removeEventListener("keydown", closeOnEscape, true);
   }, [selectedService]);
 
-  const getWhatsappUrl = (service) => {
-    const number = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009";
-    const message = `Hola Alexander, vi tu portafolio y me interesa el servicio de ${service.title}.`;
-    return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-  };
 
   return (
     <section className="servicesSection">
@@ -167,7 +162,7 @@ const Services = () => {
               </ul>
               <a
                 className="serviceContact"
-                href={getWhatsappUrl(selectedService)}
+                href="https://www.linkedin.com/in/alexdtejeda/"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -11,13 +11,10 @@ const prefersReducedMotion =
 
 const Hero = ({ children }) => {
 
-    const handleWhatsappClick = () => {
-        const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "525583845009";
-        const whatsappMessage = import.meta.env.VITE_WHATSAPP_MESSAGE || "¡Hola Alexander! Vi tu portafolio y me gustaría contactarte.";
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        window.open(whatsappUrl, '_blank');
-    }
-    
+    const handleLinkedInClick = () => {
+        window.open("https://www.linkedin.com/in/alexdtejeda/", '_blank', 'noopener,noreferrer');
+    };
+
     return (
     <header className="hero">
 
@@ -32,7 +29,7 @@ const Hero = ({ children }) => {
                 showUserInfo={true}
                 enableTilt={!prefersReducedMotion}
                 enableMobileTilt={false}
-                onContactClick={handleWhatsappClick}
+                onContactClick={handleLinkedInClick}
             />
         </section>
 
