@@ -237,23 +237,7 @@
   margin:0 13px;
 }
 
-.intro-footer {
-  border-top:1px solid var(--line);
-  padding:19px 0 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:10px;
-  color:var(--muted);
-}
 
-.intro-footer>a {
-  display:flex;
-  gap:15px;
-  align-items:center;
-  font-size:8px;
-  letter-spacing:.1em;
-}
 
 /* Browser chrome shared by project previews. */
 .preview-top > span:first-child { display: flex; gap: 3px; }
@@ -618,7 +602,7 @@
   padding-top:20px;
 }
 
-.capability-number {
+.capability-label {
   font-size:10px;
   color:#bbc0b0;
 }
@@ -772,10 +756,14 @@
 
 .job-bullets {
   list-style:disc;
-  font-size:11px;
+  font-size:12px;
   line-height:1.85;
   padding-left:15px;
   color:var(--muted);
+  margin-top:10px;
+}
+
+.job-bullets li + li {
   margin-top:10px;
 }
 
@@ -1211,18 +1199,6 @@
   .intro-stack {
     margin-top:24px;
   }
-  .intro-footer {
-    font-size:8px;
-    gap:15px;
-    padding-block:20px;
-  }
-  .intro-footer>a {
-    font-size:0;
-    gap:0;
-  }
-  .intro-footer>a svg {
-    font-size:11px;
-  }
   .context-strip>.section-wrap {
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -1316,14 +1292,9 @@
     gap:30px;
     margin-top:32px;
   }
-  .capability {
-    position:relative;
-    padding-left:38px;
-  }
-  .capability-number {
-    position:absolute;
-    left:0;
-    top:25px;
+  .capability-label {
+    display:block;
+    margin-bottom:12px;
   }
   .capability h3 {
     margin-top:0;
